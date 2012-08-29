@@ -44,3 +44,25 @@
 
 
 </project>
+
+<pluginManagment>
+	<plugin>
+	     <groupId>org.codehaus.mojo</groupId>
+	      <artifactId>sonar-maven-plugin</artifactId>
+	</plugin>
+
+
+     <plugin>
+        <groupId>org.glassfish</groupId>
+        <artifactId>maven-embedded-glassfish-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+           <app>${project.build.directory}/${build.finalName}.war</app>
+           <port>7070</port>
+           <containerType>web</containerType>
+        </configuration>
+     </plugin>
+
+</pluginManagment>
+
+
